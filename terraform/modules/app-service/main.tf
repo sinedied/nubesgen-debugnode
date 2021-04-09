@@ -31,7 +31,6 @@ resource "azurerm_app_service" "application" {
   }
 
   site_config {
-    node_version              = "~14"
     app_command_line          = "npm run start:prod"
     always_on                 = false
     use_32_bit_worker_process = true
@@ -42,6 +41,7 @@ resource "azurerm_app_service" "application" {
   app_settings = {
     "WEBSITES_ENABLE_APP_SERVICE_STORAGE" = "false"
     "WEBSITE_RUN_FROM_PACKAGE" = "1"
+    "WEBSITE_NODE_DEFAULT_VERSION" = "~14"
 
     # These are app specific environment variables
   }
