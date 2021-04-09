@@ -31,12 +31,12 @@ resource "azurerm_app_service" "application" {
   }
 
   site_config {
-    nodeVersion               = "~14"
+    node_version              = "~14"
     app_command_line          = "npm run start:prod"
     always_on                 = false
     use_32_bit_worker_process = true
     ftps_state                = "FtpsOnly"
-    http20Enabled             = true
+    http2_enabled             = true
   }
 
   app_settings = {
