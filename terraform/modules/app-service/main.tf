@@ -6,7 +6,7 @@ resource "azurerm_app_service_plan" "application" {
   location            = var.location
 
   kind     = "Windows"
-  reserved = true
+  reserved = false
 
   tags = {
     "environment" = var.environment
