@@ -19,6 +19,7 @@
     "routes",
     "views",
     "app.js",
-    "package-lock.json"
+    "package-lock.json",
+    "web.config"
   ]
 }
